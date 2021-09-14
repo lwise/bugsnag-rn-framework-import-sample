@@ -14,5 +14,4 @@ FOUNDATION_EXPORT double TestFrameworkBugsnagRNVersionNumber;
 FOUNDATION_EXPORT const unsigned char TestFrameworkBugsnagRNVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TestFrameworkBugsnagRN/PublicHeader.h>
-
-
+#import <Bugsnag/Bugsnag.h>

@@ -3,17 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		579F9718B4E18BECA2476967 /* libPods-TestFrameworkBugsnagRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23086328E25954FB11B88F40 /* libPods-TestFrameworkBugsnagRN.a */; };
 		DE0C7E1626F138BB0020C71E /* TestFrameworkBugsnagRN.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0C7E1426F138BB0020C71E /* TestFrameworkBugsnagRN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE0C7E1D26F139100020C71E /* SomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C7E1C26F139100020C71E /* SomeTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23086328E25954FB11B88F40 /* libPods-TestFrameworkBugsnagRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestFrameworkBugsnagRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A8B8A802EAAD99F98AA2D21 /* Pods-TestFrameworkBugsnagRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFrameworkBugsnagRN.release.xcconfig"; path = "Target Support Files/Pods-TestFrameworkBugsnagRN/Pods-TestFrameworkBugsnagRN.release.xcconfig"; sourceTree = "<group>"; };
+		D0D96B8C8952C60BD1160532 /* Pods-TestFrameworkBugsnagRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFrameworkBugsnagRN.debug.xcconfig"; path = "Target Support Files/Pods-TestFrameworkBugsnagRN/Pods-TestFrameworkBugsnagRN.debug.xcconfig"; sourceTree = "<group>"; };
 		DE0C7E1126F138BB0020C71E /* TestFrameworkBugsnagRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestFrameworkBugsnagRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0C7E1426F138BB0020C71E /* TestFrameworkBugsnagRN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFrameworkBugsnagRN.h; sourceTree = "<group>"; };
 		DE0C7E1526F138BB0020C71E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE0C7E1C26F139100020C71E /* SomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTest.swift; sourceTree = "<group>"; };
+		DE9BFC5526F23729006CDF7B /* libBugsnagReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBugsnagReactNative.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9BFC5726F23731006CDF7B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +29,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579F9718B4E18BECA2476967 /* libPods-TestFrameworkBugsnagRN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		084D2612A60868B99EDE3159 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE9BFC5726F23731006CDF7B /* libz.tbd */,
+				DE9BFC5526F23729006CDF7B /* libBugsnagReactNative.a */,
+				23086328E25954FB11B88F40 /* libPods-TestFrameworkBugsnagRN.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE0C7E0726F138BB0020C71E = {
 			isa = PBXGroup;
 			children = (
 				DE0C7E1326F138BB0020C71E /* TestFrameworkBugsnagRN */,
 				DE0C7E1226F138BB0020C71E /* Products */,
+				DE18D9BF89149B7C909CE729 /* Pods */,
+				084D2612A60868B99EDE3159 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +69,18 @@
 			children = (
 				DE0C7E1426F138BB0020C71E /* TestFrameworkBugsnagRN.h */,
 				DE0C7E1526F138BB0020C71E /* Info.plist */,
+				DE0C7E1C26F139100020C71E /* SomeTest.swift */,
 			);
 			path = TestFrameworkBugsnagRN;
+			sourceTree = "<group>";
+		};
+		DE18D9BF89149B7C909CE729 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0D96B8C8952C60BD1160532 /* Pods-TestFrameworkBugsnagRN.debug.xcconfig */,
+				6A8B8A802EAAD99F98AA2D21 /* Pods-TestFrameworkBugsnagRN.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE0C7E1926F138BB0020C71E /* Build configuration list for PBXNativeTarget "TestFrameworkBugsnagRN" */;
 			buildPhases = (
+				7C9487214C2509BD9CFBC644 /* [CP] Check Pods Manifest.lock */,
 				DE0C7E0C26F138BB0020C71E /* Headers */,
 				DE0C7E0D26F138BB0020C71E /* Sources */,
 				DE0C7E0E26F138BB0020C71E /* Frameworks */,
 				DE0C7E0F26F138BB0020C71E /* Resources */,
+				8EF26BE8017709A167FD1ECF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -94,6 +127,7 @@
 				TargetAttributes = {
 					DE0C7E1026F138BB0020C71E = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -125,11 +159,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C9487214C2509BD9CFBC644 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFrameworkBugsnagRN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EF26BE8017709A167FD1ECF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFrameworkBugsnagRN/Pods-TestFrameworkBugsnagRN-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFrameworkBugsnagRN/Pods-TestFrameworkBugsnagRN-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFrameworkBugsnagRN/Pods-TestFrameworkBugsnagRN-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE0C7E0D26F138BB0020C71E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0C7E1D26F139100020C71E /* SomeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +251,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -238,6 +316,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -260,7 +339,10 @@
 		};
 		DE0C7E1A26F138BB0020C71E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D96B8C8952C60BD1160532 /* Pods-TestFrameworkBugsnagRN.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -276,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwise.TestFrameworkBugsnagRN;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,7 +366,10 @@
 		};
 		DE0C7E1B26F138BB0020C71E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A8B8A802EAAD99F98AA2D21 /* Pods-TestFrameworkBugsnagRN.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
